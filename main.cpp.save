@@ -28,18 +28,14 @@ int main()
 
     Car car = { 100,
                 100,
-                txLoadImage ("Pictures/левый.bmp"),
-                txLoadImage ("Pictures/вправо.bmp"),
-                txLoadImage ("Pictures/вверх.bmp"),
-                txLoadImage ("Pictures/вниз.bmp"),
-                txLoadImage ("Pictures/вниз.bmp"),
-                txLoadImage ("Pictures/вниз.bmp"),
-                txLoadImage ("Pictures/вниз.bmp"),
-                txLoadImage ("Pictures/вниз.bmp"),
-                txLoadImage ("Pictures/UpLeft.bmp"),
-                txLoadImage ("Pictures/UpRight.bmp"),
-                txLoadImage ("Pictures/DownLeft.bmp"),
-                txLoadImage ("Pictures/DownRight.bmp"),
+                txLoadImage ("Pictures/Car/Left.bmp"),
+                txLoadImage ("Pictures/Car/Right.bmp"),
+                txLoadImage ("Pictures/Car/Up.bmp"),
+                txLoadImage ("Pictures/Car/Down.bmp"),
+                txLoadImage ("Pictures/Car/UpLeft.bmp"),
+                txLoadImage ("Pictures/Car/UpRight.bmp"),
+                txLoadImage ("Pictures/Car/DownLeft.bmp"),
+                txLoadImage ("Pictures/Car/DownRight.bmp"),
                 car.right};
 
     HDC MAP = txLoadImage ("Pictures/карта.bmp");
@@ -59,6 +55,9 @@ int main()
 
         if(car.picture==car.down || car.picture==car.up)
         txTransparentBlt (txDC(), car.x+40, car.y+20, 40, 80, car.picture, 0, 0, TX_WHITE);
+
+        if(car.picture==car.DownLeft)
+        txTransparentBlt (txDC(), car.x+40, car.y+20, 70, 70, car.picture, 0, 0, TX_WHITE);
 
         if(GetAsyncKeyState ('W'))
         {
@@ -84,33 +83,32 @@ int main()
             car.picture = car.right;
         }
 
-        else if(GetAsyncKeyState ('D'))
+        if(GetAsyncKeyState ('A') && GetAsyncKeyState ('S'))
         {
-            car.x =car.x+10;
-            car.picture = car.right;
+            car.x =car.x-10;
+            car.y =car.y+10;
+            car.picture = car.DownLeft;
         }
-
-        else if(GetAsyncKeyState ('W') && GetAsyncKeyState ('A'))
+        
+        if(GetAsyncKeyState ('A') && GetAsyncKeyState ('S'))
         {
-            car.x =car.x+10;
-            car.picture = car.UpLeft;
+            car.x =car.x-10;
+            car.y =car.y+10;
+            car.picture = car.DownLeft;
         }
-
-        else if(GetAsyncKeyState ('AS'))
+        
+        if(GetAsyncKeyState ('A') && GetAsyncKeyState ('S'))
         {
-            car.x =car.x+10;
-            car.picture = car.right;
+            car.x =car.x-10;
+            car.y =car.y+10;
+            car.picture = car.DownLeft;
         }
-
-        else if(GetAsyncKeyState ('SD'))                   
+        
+        if(GetAsyncKeyState ('W') && GetAsyncKeyState ('A'))
         {
-            car.x =car.x+10;
-            car.picture = car.right;
-        }
-        else if(GetAsyncKeyState ('DW'))
-        {
-            car.x =car.x+10;
-            car.picture = car.right;
+            car.x =car.x-10;
+            car.y =car.y-10;
+            car.picture = car.DownLeft;
         }
 
         txEnd();
