@@ -1,0 +1,117 @@
+
+--------------------------------------------------
+TXLib сообщает:
+
+Программа: C:\C++\GameMalkin\bin\Debug\GameMalkin.exe, файл: c:\users\user\downloads\codeblocks\mingw\include\txlib.h, строка: 13657, функция: bool {anonymous}::TX::txTransparentBlt(HDC, double, double, double, double, HDC, double, double, COLORREF),
+
+Сообщение: Параметр "sourceImage" неверен. Возможно, этот холст не создан, или уже уничтожен, или не загрузилась картинка.
+
+#1: TXLib [Ver: 00173a, Rev: 171, Date: 2021-07-19 01:45:49 +0400], Instance: 0x004F42FC (32-bit), Flags: CMdRE0, Thread: 0x1B10 (Main), GetLastError(): 13 (Недопустимые данные). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x004173D3 in C:\C++\GameMalkin\bin\Debug\GameMalkin.exe: txTransparentBlt() at c:/users/user/downloads/codeblocks/mingw/include/txlib.h (13657)
+
+# 1 0x0041D52F in C:\C++\GameMalkin\bin\Debug\GameMalkin.exe: main() at C:/C++/GameMalkin/main.cpp (46):
+
+     44: 
+     45:         if(car.picture==car.left || car.picture==car.right)
+=>   46:         txTransparentBlt (txDC(), car.x, car.y, 80, 40, car.picture, 0, 0, TX_WHITE);
+     47: 
+     48:         if(car.picture==car.down || car.picture==car.up)
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 171, Date: 2021-07-19 01:45:49 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	c:\users\user\downloads\codeblocks\mingw\include\txlib.h
+Compiled:	Feb 16 2022 18:45:58, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, Debug
+Started:	Feb 16 2022 18:46:25
+
+Run file:	C:\C++\GameMalkin\bin\Debug\GameMalkin.exe
+Directory:	C:\C++\GameMalkin
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib сообщает:
+
+Программа: D:\C++\GameMalkin\bin\Debug\GameMalkin.exe, файл: c:\users\user\downloads\codeblocks\mingw\include\txlib.h, строка: 13657, функция: bool {anonymous}::TX::txTransparentBlt(HDC, double, double, double, double, HDC, double, double, COLORREF),
+
+Сообщение: Параметр "sourceImage" неверен. Возможно, этот холст не создан, или уже уничтожен, или не загрузилась картинка.
+
+#1: TXLib [Ver: 00173a, Rev: 171, Date: 2021-07-19 01:45:49 +0400], Instance: 0x004F42FC (32-bit), Flags: CMdRE0, Thread: 0x38A8 (Main), GetLastError(): 13 (Недопустимые данные). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x004173D3 in D:\C++\GameMalkin\bin\Debug\GameMalkin.exe: txTransparentBlt() at c:/users/user/downloads/codeblocks/mingw/include/txlib.h (13657)
+
+# 1 0x0041D602 in D:\C++\GameMalkin\bin\Debug\GameMalkin.exe: main() at D:/C++/GameMalkin/main.cpp (46):
+
+     44: 
+     45:         if(car.picture==car.left || car.picture==car.right)
+=>   46:         txTransparentBlt (txDC(), car.x+40, car.y+20, 80, 40, car.picture, 0, 0, TX_WHITE);
+     47: 
+     48:         if(car.picture==car.down || car.picture==car.up)
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 171, Date: 2021-07-19 01:45:49 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	c:\users\user\downloads\codeblocks\mingw\include\txlib.h
+Compiled:	Feb 18 2022 19:06:03, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, Debug
+Started:	Feb 18 2022 19:19:07
+
+Run file:	D:\C++\GameMalkin\bin\Debug\GameMalkin.exe
+Directory:	D:\C++\GameMalkin
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib сообщает:
+
+Программа: D:\C++\GameMalkin\bin\Debug\GameMalkin.exe, файл: c:\users\user\downloads\codeblocks\mingw\include\txlib.h, строка: 13657, функция: bool {anonymous}::TX::txTransparentBlt(HDC, double, double, double, double, HDC, double, double, COLORREF),
+
+Сообщение: Параметр "sourceImage" неверен. Возможно, этот холст не создан, или уже уничтожен, или не загрузилась картинка.
+
+#1: TXLib [Ver: 00173a, Rev: 171, Date: 2021-07-19 01:45:49 +0400], Instance: 0x004F42FC (32-bit), Flags: CMdRE0, Thread: 0x22AC (Main), GetLastError(): 13 (Недопустимые данные). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x004173D3 in D:\C++\GameMalkin\bin\Debug\GameMalkin.exe: txTransparentBlt() at c:/users/user/downloads/codeblocks/mingw/include/txlib.h (13657)
+
+# 1 0x0041D722 in D:\C++\GameMalkin\bin\Debug\GameMalkin.exe: main() at D:/C++/GameMalkin/main.cpp (54):
+
+     52: 
+     53:         if(car.picture==car.left || car.picture==car.right)
+=>   54:         txTransparentBlt (txDC(), car.x+40, car.y+20, 80, 40, car.picture, 0, 0, TX_WHITE);
+     55: 
+     56:         if(car.picture==car.down || car.picture==car.up)
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 171, Date: 2021-07-19 01:45:49 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	c:\users\user\downloads\codeblocks\mingw\include\txlib.h
+Compiled:	Feb 25 2022 19:21:18, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, Debug
+Started:	Feb 25 2022 19:22:07
+
+Run file:	D:\C++\GameMalkin\bin\Debug\GameMalkin.exe
+Directory:	D:\C++\GameMalkin
+
+--------------------------------------------------
